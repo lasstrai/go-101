@@ -14,5 +14,9 @@ func searchInsert(nums []int, target int) int {
 			high = mid - 1
 		}
 	}
-	return mid + 1
+	if nums[mid] < target {
+		return mid + 1
+	} else {
+		return mid
+	}
 }
